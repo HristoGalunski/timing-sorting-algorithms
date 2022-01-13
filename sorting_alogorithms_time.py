@@ -77,58 +77,7 @@ class MergeSort(Algorithm):
 			k += 1
 		return
 		
-
 		
-
-
-
-
-
-
-
-
-
-
-		if len(self.array) > 1:
-			mid = len(self.array) // 2
-			left = self.array[:mid]
-			right = self.array[mid:]
-
-			# Recursive call on each half
-			left = self.run()
-			left = self.run()
-
-			# Two iterators for traversing the two halves
-			i = 0
-			j = 0
-			
-			# Iterator for the main list
-			k = 0
-			
-			while i < len(left) and j < len(right):
-				if left[i] <= right[j]:
-					# The value from the left half has been used
-					self.array[k] = left[i]
-					# Move the iterator forward
-					i += 1
-				else:
-					self.array[k] = right[j]
-					j += 1
-				# Move to the next slot
-				k += 1
-
-			# For all the remaining values
-			while i < len(left):
-				self.array[k] = left[i]
-				i += 1
-				k += 1
-
-			while j < len(right):
-				self.array[k]=right[j]
-				j += 1
-				k += 1
-
-
 if __name__ == "__main__":
 	ARRAY_SIZE = 20
 

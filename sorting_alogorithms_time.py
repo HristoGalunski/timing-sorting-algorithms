@@ -77,14 +77,28 @@ class MergeSort(Algorithm):
 			k += 1
 		return
 		
-		
+	
+class SelectionSort(Algorithm):
+	def __init__(self):
+		super().__init__("SelectionSort", ARRAY_SIZE)
+
+	def run(self):
+		for i in range(len(self.array)):
+			index = i
+			for j in range(i+1, len(self.array)):
+				if self.array[j] < self.array[index]:
+					i = j
+			self.array[i], self.array[index] = self.array[index], self.array[i]
+
+
 if __name__ == "__main__":
 	ARRAY_SIZE = 20
 
 	algorithms_dict = {
 		"BubbleSort" : BubbleSort(),
 		"InsertionSort" : InsertionSort(),
-		"MergeSort" : MergeSort()
+		"MergeSort" : MergeSort(),
+		"SelectionSort" : SelectionSort()
 	}
 
 	for i in algorithms_dict:
